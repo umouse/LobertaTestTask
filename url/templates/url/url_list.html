@@ -1,0 +1,30 @@
+<table>
+    <tr>
+    <th>ID</th>
+    <th>URL path</th>
+    <th>Status code</th>
+  </tr>
+{% for url in urls %}
+<tr {% if url.code == 200 %}
+                class = "status_code_green"
+            {%else%}
+                class = "status_code_red"
+            {% endif %} >
+    <td>
+        {{url.id}}
+    </td>
+    <td>
+        <a href="/"> {{url.path}}</a>
+    </td>
+     <td>
+        {{url.code}}
+    </td>
+</tr>
+{% endfor %}
+</table>
+
+
+
+
+
+
