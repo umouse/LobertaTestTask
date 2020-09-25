@@ -3,27 +3,23 @@
     <th>ID</th>
     <th>URL path</th>
     <th>Status code</th>
+    <th>Pause check</th>
   </tr>
 {% for url in urls %}
-<tr {% if url.code == 200 %}
-                class = "status_code_green"
-            {%else%}
-                class = "status_code_red"
-            {% endif %} >
+<tr class = "url_row">
+    <td class = "id">{{url.id}}</td>
     <td>
-        {{url.id}}
+        <a href= {{url.path}}> {{url.path}}</a>
     </td>
-    <td>
-        <a href="/"> {{url.path}}</a>
-    </td>
-     <td>
+     <td class = "status_code">
         {{url.code}}
+    </td>
+    <td>
+        <input type="checkbox" class = "pause" >
     </td>
 </tr>
 {% endfor %}
 </table>
-
-
 
 
 
