@@ -1,6 +1,6 @@
 # LobertaTestTask
 Test task for Loberta company
 
-Login credentials:
-username: admin
-password: adminadmin
+To connect to URL Status Checker use `/`.
+
+Project not include DB, you have to add some urls via Django admin ('/admin').
